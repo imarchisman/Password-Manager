@@ -24,7 +24,7 @@ const passwordSlice = createSlice({
   },
 })
 
-export const { addPass, removePass, removeAll, editPasswords, editPassword } = passwordSlice.actions
+export const { addPass, removePass, removeAll, editPassword } = passwordSlice.actions
 
 
 export default passwordSlice.reducer

@@ -24,12 +24,12 @@ const addPassword = ()=>{
 
   return (
    <>
-   <div className='ml-52 mt-8 p-5 rounded-lg' >
+   <div className='md:ml-52 mt-8 md:p-5 flex flex-col md:flex-row gap-3 m-2 rounded-lg' >
 
-    <input className='w-3/12 bg-slate-900
-     text-white mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={webName} onChange={(e)=>{setwebName(e.target.value)}} type="text" placeholder='WebSites Name' />
-    <input className='w-3/12 bg-slate-900 text-white mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={uId} onChange={(e)=>{setUId(e.target.value)}} type="text" placeholder='User Id' />
-    <input className='w-3/12 bg-slate-900 text-white mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={pass} onChange={(e)=>{setPass(e.target.value)}} type="text" placeholder='Password' />
+    <input className='md:w-3/12 bg-slate-900
+     text-white md:mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={webName} onChange={(e)=>{setwebName(e.target.value)}} type="text" placeholder='WebSites Name' />
+    <input className='md:w-3/12 bg-slate-900 text-white md:mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={uId} onChange={(e)=>{setUId(e.target.value)}} type="text" placeholder='User Id' />
+    <input className='md:w-3/12 bg-slate-900 text-white md:mr-5 px-3 rounded-lg py-2 focus:outline-none focus:ring-black focus:ring-2' value={pass} onChange={(e)=>{setPass(e.target.value)}} type="text" placeholder='Password' />
     <button className='bg-blue-600 px-5 py-2 rounded-lg text-white' onClick={addPassword}>Save</button>
     
    </div>

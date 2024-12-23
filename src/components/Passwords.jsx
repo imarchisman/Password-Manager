@@ -36,16 +36,16 @@ function Passwords() {
   }
 
   if (passwords.length < 1) {
-    return <h1 className='text-gray-400 ml-[650px]'>No Password Present</h1>;
+    return <h1 className='text-gray-400 text-center'>No Password Present</h1>;
   }
 
   return (
     <div>
       <div className='flex mb-5'>
-        <h1 className='text-white font-bold text-2xl ml-[650px] mb-3'>All Passwords</h1>
+        <h1 className='text-white font-bold text-2xl md:ml-[650px] ml-24 mb-3'>All Passwords</h1>
         {passwords.length > 1 && (
           <button
-            className='bg-red-600 px-5 ml-5 py-2 rounded-lg text-white'
+            className='bg-red-600 md:px-5 md:ml-5 md:py-2 ml-1 px-2 rounded-lg text-white'
             onClick={() => dispatch(removeAll())}>
             Clear All Data
           </button>
@@ -55,21 +55,21 @@ function Passwords() {
         {passwords.map((password, index) => (
           <ul
             key={index}
-            className='flex bg-slate-900 mx-5 rounded-lg text-xl px-4 py-2 justify-between mb-3'>
-            <div className='flex justify-between w-7/12'>
-              <li className='px-5 py-2'>{password.site}</li>
+            className='flex bg-slate-900 md:mx-5 mx-1 h-[70px] rounded-lg text-xl md:px-4 md:py-2 justify-between mb-3'>
+            <div className='flex mt-2 justify-between w-7/12'>
+              <li className='px-5  py-2'>{password.site}</li>
               <li className='px-5 py-2'>{password.userId}</li>
-              <input className='px-5 py-2 bg-slate-900' value={password.pass} type='text' readOnly />
+              <li className='px-5 py-2'>{password.pass}</li>
             </div>
-            <div className='flex gap-8'>
+            <div className='flex flex-col md:flex-row md:gap-8 h-9 md:h-[54px]'>
               <li
                 onClick={() => editPassword(index)}
-                className='px-5 py-2 rounded-xl bg-green-600 cursor-pointer'>
+                className=' px-5 md:py-2 py-1 rounded-xl bg-green-600 cursor-pointer'>
                 ✏️
               </li>
               <li
                 onClick={() => passRe(index)}
-                className='cursor-pointer px-5 py-2 bg-red-700 rounded-xl'>
+                className='cursor-pointer px-5 md:py-2 py-1 bg-red-700 rounded-xl'>
                 🗑️
               </li>
             </div>

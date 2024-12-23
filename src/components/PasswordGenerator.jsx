@@ -33,13 +33,13 @@ function PasswordGenerator() {
 
   return (
    <>
-   <div className='bg-gray-900 text-white overflow-hidden rounded-2xl shadow-lg min-h-[350px] max-w-[850px] mt-5 m-auto'>
-      <h1 className='text-4xl text-center bg-blue-800 py-5 font-bold text-white'>Password Generator</h1>
-      <div className='mt-5 ml-20'>
+   <div className='bg-gray-900 mt-3 text-white overflow-hidden rounded-2xl shadow-lg md:min-h-[350px] md:max-w-[850px] md:mt-5 md:m-auto'>
+      <h1 className='md:text-4xl text-2xl text-center bg-blue-800 py-2 md:py-5 font-bold text-white'>Password Generator</h1>
+      <div className='mt-5 md:ml-20 ml-16'>
       <input type="text" value={value} readOnly ref={pass}
-      className='w-9/12 text-black py-2 selection:bg-green-400 px-2 rounded-l-xl text-2xl focus:outline-none'
+      className='md:w-9/12 text-black py-2 selection:bg-green-400 px-2 rounded-l-xl md:text-2xl focus:outline-none'
       />
-      <button className='bg-blue-800 py-[9px] text-2xl rounded-r-xl px-4 font-semibold'
+      <button className='bg-blue-800 py-[9px] md:text-2xl rounded-r-xl px-4 font-semibold'
       onClick={ ()=>{
         navigator.clipboard.writeText(pass?.current?.value)
         pass?.current?.select();
@@ -48,21 +48,21 @@ function PasswordGenerator() {
        }}
       >Copy</button>
       </div>
-      <div className='p-10 text-center'>
-      <label className='font-semibold  text-xl' htmlFor="">Length ({length}) </label>
+      <div className='md:p-10 p-7 text-center'>
+      <label className='font-semibold  md:text-xl' htmlFor="">Length ({length}) </label>
       <input type="range" 
       className='mr-3 w-3/12 accent-yellow-400  rounded-xl'
       min={4} 
       max={30} 
       value={length} 
       onChange={(e)=>{setLength(e.target.value)}} />
-      <label className='font-semibold  text-xl' htmlFor="">Number</label>
-      <input  className='mr-3 ml-3  w-6 h-6'
+      <label className='font-semibold  md:text-xl' htmlFor="">Number</label>
+      <input  className='mr-3 ml-3  md:w-6 md:h-6'
        type="checkbox" onChange={()=>{setNumber(!number)}}/>
-      <label className='font-semibold  text-xl' htmlFor="">Special Character</label>
-      <input className='mr-3 ml-3 w-6 h-6 ' type="checkbox" onChange={()=>{setSpecialCharacter(!specialCharacter)}} />
+      <label className='font-semibold  md:text-xl' htmlFor="">Special Character</label>
+      <input className='mr-3 ml-3 md:w-6 md:h-6 ' type="checkbox" onChange={()=>{setSpecialCharacter(!specialCharacter)}} />
       </div>
-      <button onClick={passwordGenerator} className='bg-green-500 ml-[350px] py-2 text-2xl rounded-xl px-4 font-semibold text-black'>Regenerate</button>
+      <button onClick={passwordGenerator} className='bg-green-500 ml-[120px] md:ml-[350px] md:py-2 mb-3 md:text-2xl rounded-xl px-4 font-semibold text-black'>Regenerate</button>
       </div>
       
    </>
